@@ -1,38 +1,38 @@
 {
-  "name": "make-plural-monorepo",
-  "private": true,
-  "description": "Monorepo for make-plural packages",
-  "author": "Eemeli Aro <eemeli@gmail.com>",
-  "license": "ISC",
-  "workspaces": [
-    "packages/compiler",
-    "packages/cli",
-    "packages/plurals"
+  "name": "make-all-plural",
+  "version": "7.2.0",
+  "description": "make-plural for cross-platform",
+  "keywords": [
+    "unicode",
+    "cldr",
+    "i18n",
+    "internationalization",
+    "pluralization"
   ],
+  "author": "Matheus Leonardo <mlsm@trialent.com>",
+  "license": "Unicode-DFS-2016",
+  "homepage": "https://github.com/trial-trl/make-all-plural#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eemeli/make-plural.git"
+    "url": "https://github.com/trial-trl/make-all-plural.git"
   },
+  "bugs": {
+    "url": "https://github.com/trial-trl/make-all-plural/issues"
+  },
+  "files": [
+    "cardinals.*",
+    "ordinals.*",
+    "plurals.*",
+    "pluralCategories.*",
+    "ranges.*"
+  ],
+  "type": "commonjs",
+  "sideEffects": false,
+  "main": "./plurals.js",
   "scripts": {
-    "build": "gulp",
-    "clean": "git clean -fdx packages/",
-    "prettier": "prettier --write .",
-    "preversion": "npm run clean && npm run build && npm test",
-    "test": "nyc mocha"
+    "prettier": "prettier --write ."
   },
   "devDependencies": {
-    "@babel/core": "^7.12.0",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.12.0",
-    "@babel/register": "^7.12.0",
-    "chai": "^4.2.0",
-    "cldr-core": "^42.0.0",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "mocha": "^10.1.0",
-    "nyc": "^15.1.0",
-    "prettier": "^2.1.2",
-    "safe-identifier": "^0.4.2",
-    "yargs": "^17.6.2"
+    "prettier": "^2.1.2"
   }
 }
